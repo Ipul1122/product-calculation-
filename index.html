@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Buah MISOPU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="card">
+        <img src="img/apel.png" alt="Apel">
+        <h3>Apel</h3>
+        <p>Rp <span class="price">10000</span></p>
+        <div class="quantity-controls">
+            <button onclick="decreaseQuantity(this, 'Apel', 10000)">-</button>
+            <span class="quantity">0</span>
+            <button onclick="increaseQuantity(this, 'Apel', 10000)">+</button>
+        </div>
+    </div>
+
+    
+    <div class="card">
+        <img src="img/jeruk.png" alt="Jeruk">
+        <h3>Jeruk</h3>
+        <p>Rp <span class="price">20000</span></p>
+        <div class="quantity-controls">
+            <button onclick="decreaseQuantity(this, 'Jeruk', 20000)">-</button>
+            <span class="quantity">0</span>
+            <button onclick="increaseQuantity(this, 'Jeruk', 20000)">+</button>
+        </div>
+    </div>
+    
+
+    <div class="card">
+        <img src="img/semangka.png" alt="Semangka">
+        <h3>Semangka</h3>
+        <p>Rp <span class="price">30000</span></p>
+        <div class="quantity-controls">
+            <button onclick="decreaseQuantity(this, 'Semangka', 30000)">-</button>
+            <span class="quantity">0</span>
+            <button onclick="increaseQuantity(this, 'Semangka', 30000)">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Tabel untuk Menampilkan  Pesanan -->
+<div class="order-summary">
+    <h2>Keranjang Belanja</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Buah</th>
+                <th>Harga Satuan</th>
+                <th>Kuantitas</th>
+                <th>Total Harga</th>
+            </tr>
+        </thead>
+        <tbody id="orderTable">
+            <!-- Baris pesanan akan ditambahkan di sini melalui JavaScript -->
+        </tbody>
+    </table>
+
+    <div class="total-summary">
+        <h3>Total Keseluruhan</h3>
+        <p id="totalPrice">Rp 0</p>
+        <button class="purchase-button" onclick="purchaseItems()">Beli Produk</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
